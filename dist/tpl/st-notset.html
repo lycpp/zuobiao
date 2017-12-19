@@ -1,0 +1,78 @@
+<table id="table"
+       data-toolbar="#toolbar"
+       data-search="true"
+       data-show-refresh="true"
+       data-show-toggle="true"
+       data-show-columns="true"
+       data-show-export="true"
+       data-minimum-count-columns="2"
+       data-show-pagination-switch="true"
+       data-pagination="true"
+       data-id-field="id"
+       data-page-list="[10, 25, 50, 100, ALL]"
+       data-show-footer="false"
+       data-side-pagination="server"
+       data-response-handler="responseHandler"></table>
+    <div class="modal fade" id="addteamdialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">提示信息</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="selectTeacher" class="control-label">请选择师傅:</label>
+              <div class="flex-lr">
+                <select class="form-control col-xs-9" id="selectTeacher">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                <a class="searchdialog col-xs-3" href="javascript:void(0)">检索</a>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="selectconfirmbtn">确认</button>
+            <button type="button" class="btn btn-default">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="modal fade bs-example-modal-sm" id="searchdialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="searchdialogLabel">提示信息</h4>
+            </div>
+                <div class="modal-body form-inline">
+                  <div class="form-group">
+                    <label for="username" class="control-label">姓名:</label>
+                    <input type="text" class="form-control" id="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="sysno" class="control-label">系统号:</label>
+                    <input class="form-control" id="sysno"></input>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="searchconfirmbtn">确认</button>
+                <button type="button" class="btn btn-default">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<script type="text/javascript">
+  (function(){
+    seajs.use('st-notset', function (notset) {
+      notset.init();
+    });
+  })()
+</script>

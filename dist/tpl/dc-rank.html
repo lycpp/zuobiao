@@ -1,0 +1,55 @@
+<form class="form-inline flex-lr">
+    <div class="form-group">
+      <label for="area">大区</label>
+      <select class="form-control" id="area">
+        <option>1大区</option>
+        <option>2大区</option>
+        <option>3大区</option>
+        <option>4大区</option>
+        <option>5大区</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="store">店面</label>
+      <select class="form-control" id="store">
+        <option>1店</option>
+        <option>2店</option>
+        <option>3店</option>
+        <option>4店</option>
+        <option>5店</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="username">姓名</label>
+      <input type="email" class="form-control" id="username" placeholder="输入姓名">
+    </div>
+    <div class="form-group">
+      <label for="sysno">系统号</label>
+      <input type="email" class="form-control" id="sysno" placeholder="输入系统号">
+    </div>
+</form>
+<div class="flex-rr" style="margin: 30px 0;">
+  <button class="btn btn-primary" style="margin-right: 50px;">查询</button>
+  <button class="btn btn-primary">导出</button>
+</div>
+<table id="table"
+       data-toolbar="#toolbar"
+       data-search="true"
+       data-show-refresh="true"
+       data-show-toggle="true"
+       data-show-columns="true"
+       data-show-export="true"
+       data-minimum-count-columns="2"
+       data-show-pagination-switch="true"
+       data-pagination="true"
+       data-id-field="id"
+       data-page-list="[10, 25, 50, 100, ALL]"
+       data-show-footer="false"
+       data-side-pagination="server"
+       data-response-handler="responseHandler"></table>
+<script type="text/javascript">
+  seajs.use('dc-rank', function (rank) {
+    rank.init();
+  });
+</script>
+

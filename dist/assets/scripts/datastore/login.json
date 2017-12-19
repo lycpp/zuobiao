@@ -1,0 +1,12 @@
+{
+  "data":[{
+    "username":"admin",
+    "password":"123456",
+    "avatar":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513659751806&di=cac6b86c4d8562fa2bca0633bac3e943&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201411%2F08%2F20141108141308_i5ek5.jpeg"
+  },
+    {
+      "username":"admin1",
+      "password":"123456",
+      "avatar":"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=564051558,2124783538&fm=27&gp=0.jpg"
+    }]
+}

@@ -1,0 +1,7 @@
+$icon-font-path: '../fonts/';
+// bower:scss
+@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "./../lib/bootstrapvalidator/css/bootstrapValidator.css";
+// endbower
+@import "lang.scss";
+@import "index.scss";

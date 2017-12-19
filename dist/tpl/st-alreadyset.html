@@ -1,0 +1,37 @@
+<table id="table"
+       data-toolbar="#toolbar"
+       data-search="true"
+       data-show-refresh="true"
+       data-show-toggle="true"
+       data-show-columns="true"
+       data-show-export="true"
+       data-detail-view="true"
+       data-detail-formatter="detailFormatter"
+       data-minimum-count-columns="2"
+       data-show-pagination-switch="true"
+       data-pagination="true"
+       data-id-field="id"
+       data-page-list="[10, 25, 50, 100, ALL]"
+       data-show-footer="false"
+       data-side-pagination="server"
+       data-response-handler="responseHandler">
+  <!--<thead>
+    <tr>
+      <th data-field="name" data-width="100px">组长/人数</th>
+      <th data-field="no" data-width="100px">系统号</th>
+      <th data-field="role" data-width="100px">角色</th>
+      <th data-field="rank" data-width="100px">职级</th>
+      <th data-field="adddate" data-width="100px">建立关系</th>
+      <th data-field="id" data-width="100px" data-events="operateEvents" data-formatter="operateFormatter">操作</th>
+    </tr>
+  </thead>-->
+</table>
+
+<script type="text/javascript">
+  (function(){
+    seajs.use('st-alreadyset', function (alreadyset) {
+      alreadyset.init();
+    });
+  })()
+
+</script>

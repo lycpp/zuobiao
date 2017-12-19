@@ -1,0 +1,86 @@
+$bluedef-color: #1273e1 !global;
+$sidebar-bg-color:#ddd!global;
+html,body{
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+  background-color: none;
+}
+ul,li{
+  list-style:none
+}
+#main-nav .active{
+  background-color: white;
+}
+/*水平方向左右分布*/
+.flex-lr{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-direction: row;
+}
+.flex-ll{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.flex-rr{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+/*垂直方向居中分布*/
+.flex-vc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*垂直方向居左分布*/
+.flex-vl{
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+}
+/*水平方向居中分布*/
+.flex-cc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+/*基准线对齐*/
+.flex-bc{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: row;
+}
+/*流式布局*/
+.flex-auto{
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-flow:wrap;
+}
+.page-login{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
+  z-index: 9999;
+  form{
+    width: 400px;
+    height: 100px;
+  }
+}
