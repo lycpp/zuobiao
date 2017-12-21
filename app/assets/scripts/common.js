@@ -123,7 +123,6 @@ define(function (require, exports, module) {
 
   //左菜单样式
   var sidbarClass=function(link){
-    console.log("linklink:",link);
     $(".nav-list").addClass("collapse").removeClass("in").attr("style","height: 0;");
     $("#main-nav .nav-list li").find("a").each(function(n,r){
       if($(r).attr("href").indexOf(link)!=-1){
@@ -141,10 +140,7 @@ define(function (require, exports, module) {
       $("#useravatar").attr("src",exports.cache("user").avatar);
       $("#username").text(exports.cache("user").username);
       $("#userinfo").attr("data-toggle","dropdown");
-    }else{
-      window.location.href="/tpl/login.html";
     }
-
   }
 
   //dialog确认按钮回调
@@ -159,14 +155,20 @@ define(function (require, exports, module) {
       timeout: 60000,
       type: 'get',
       beforeSend: function (jqXHR, settings) {
-        var n_token = exports.cache('user');
-        if (typeof settings.data == 'object') {
-          // settings.data.append('token',n_token)
-        } else {
-          jqXHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-          // settings.data += '&token=' + n_token;
-        }
-        return true;
+        /*var n_user = exports.cache('user');
+        if(n_user){
+          if (typeof settings.data == 'object') {
+            // settings.data.append('token',n_token)
+          } else {
+            jqXHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            // settings.data += '&token=' + n_token;
+          }
+          return true;
+        }else{
+          window.location.href='/tpl/login.html'
+          return false;
+        }*/
+
       },
       complete: function (res) {
         if (typeof res.responseJSON == 'object') {
@@ -213,19 +215,20 @@ define(function (require, exports, module) {
       sidbarClass(hashlink)
     });*/
     $(window).bind('pageshow', function () {
+      console.log('pageshowpageshow');
       var nlink = '';
-      if (location.href.indexOf("login") == -1) {
-        if (location.href.indexOf('#') > -1) {
-          nlink = location.href.substr(location.href.indexOf('#')).replace("#", "");
-        }
-        if (!nlink.length > 0) {
-          window.location.href = location.href + "#tpl/st-alreadyset.html"
-        } else {
-          loadhtml(nlink);
-        }
-        headUserinfo();
-        sidbarClass(nlink)
+      console.log(location.href);
+      if (location.href.indexOf('#') > -1) {
+        nlink = location.href.substr(location.href.indexOf('#')).replace("#", "");
       }
+      console.log("nlink：",nlink);
+      if (!nlink.length > 0) {
+        window.location.href = location.href + "#tpl/st-alreadyset.html";
+        nlink="tpl/st-alreadyset.html";
+      }
+      loadhtml(nlink);
+      headUserinfo();
+      sidbarClass(nlink)
     })
 
     //退出
